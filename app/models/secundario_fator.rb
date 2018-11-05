@@ -1,0 +1,2 @@
+class SecundarioFator < ApplicationRecord
+end

@@ -1,0 +1,1 @@
+json.partial! "principal_caracteristicas/principal_caracteristica", principal_caracteristica: @principal_caracteristica

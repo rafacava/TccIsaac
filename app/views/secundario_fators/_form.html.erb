@@ -1,0 +1,22 @@
+<%= form_with(model: secundario_fator, local: true) do |form| %>
+  <% if secundario_fator.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(secundario_fator.errors.count, "error") %> prohibited this secundario_fator from being saved:</h2>
+
+      <ul>
+      <% secundario_fator.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

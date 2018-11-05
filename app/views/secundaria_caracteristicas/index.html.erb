@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Secundaria Caracteristicas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @secundaria_caracteristicas.each do |secundaria_caracteristica| %>
+      <tr>
+        <td><%= secundaria_caracteristica.nome %></td>
+        <td><%= link_to 'Show', secundaria_caracteristica %></td>
+        <td><%= link_to 'Edit', edit_secundaria_caracteristica_path(secundaria_caracteristica) %></td>
+        <td><%= link_to 'Destroy', secundaria_caracteristica, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Secundaria Caracteristica', new_secundaria_caracteristica_path %>

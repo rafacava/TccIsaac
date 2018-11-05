@@ -1,0 +1,2 @@
+class PrincipalCaracteristica < ApplicationRecord
+end

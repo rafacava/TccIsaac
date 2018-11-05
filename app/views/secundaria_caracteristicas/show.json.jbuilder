@@ -1,0 +1,1 @@
+json.partial! "secundaria_caracteristicas/secundaria_caracteristica", secundaria_caracteristica: @secundaria_caracteristica

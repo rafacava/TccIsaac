@@ -1,0 +1,2 @@
+class TerciariaCaracteristica < ApplicationRecord
+end

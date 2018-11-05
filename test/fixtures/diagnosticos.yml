@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  principal_fator: one
+  secundario_fator: one
+  terciario_fator: one
+  principal_caracteristica: one
+  secundaria_caracteristica: one
+  terciaria_caracteristica: one
+
+two:
+  nome: MyString
+  principal_fator: two
+  secundario_fator: two
+  terciario_fator: two
+  principal_caracteristica: two
+  secundaria_caracteristica: two
+  terciaria_caracteristica: two

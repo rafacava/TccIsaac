@@ -1,0 +1,2 @@
+module SecundariaCaracteristicasHelper
+end

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Terciario Fators</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @terciario_fators.each do |terciario_fator| %>
+      <tr>
+        <td><%= terciario_fator.nome %></td>
+        <td><%= link_to 'Show', terciario_fator %></td>
+        <td><%= link_to 'Edit', edit_terciario_fator_path(terciario_fator) %></td>
+        <td><%= link_to 'Destroy', terciario_fator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Terciario Fator', new_terciario_fator_path %>

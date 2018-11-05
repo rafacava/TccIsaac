@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Principal Fators</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @principal_fators.each do |principal_fator| %>
+      <tr>
+        <td><%= principal_fator.nome %></td>
+        <td><%= link_to 'Show', principal_fator %></td>
+        <td><%= link_to 'Edit', edit_principal_fator_path(principal_fator) %></td>
+        <td><%= link_to 'Destroy', principal_fator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Principal Fator', new_principal_fator_path %>

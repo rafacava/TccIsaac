@@ -1,0 +1,2 @@
+class PrincipalFator < ApplicationRecord
+end

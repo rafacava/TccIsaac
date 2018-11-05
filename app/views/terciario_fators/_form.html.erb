@@ -1,0 +1,22 @@
+<%= form_with(model: terciario_fator, local: true) do |form| %>
+  <% if terciario_fator.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(terciario_fator.errors.count, "error") %> prohibited this terciario_fator from being saved:</h2>
+
+      <ul>
+      <% terciario_fator.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

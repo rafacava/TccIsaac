@@ -1,0 +1,22 @@
+<%= form_with(model: principal_caracteristica, local: true) do |form| %>
+  <% if principal_caracteristica.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(principal_caracteristica.errors.count, "error") %> prohibited this principal_caracteristica from being saved:</h2>
+
+      <ul>
+      <% principal_caracteristica.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
