@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   
+  get 'busca/diagnostico'
+  get 'busca/fator'
+  get 'busca/caracteristica'
   root 'index#principal'
   resources :diagnosticos
   resources :terciaria_caracteristicas

@@ -1,0 +1,22 @@
+<!-- Modal Trigger -->
+  <a class="waves-effect waves-light btn-large blue modal-trigger" href="#modal1">Buscar um diagnostico</a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h3>Buscar um diagnostico</h3>
+      <%= form_tag(diagnosticos_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "buscar diagnosticos" %>
+      <%= submit_tag "Buscar", :class => 'btn-large blue' %>
+      <% end %>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Fechar</a>
+    </div>
+  </div>
+  
+  <script>
+          $(document).ready(function(){
+           $('.modal').modal();
+  });      
+  </script>

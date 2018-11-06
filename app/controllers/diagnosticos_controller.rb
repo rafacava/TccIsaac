@@ -5,6 +5,11 @@ class DiagnosticosController < ApplicationController
   # GET /diagnosticos.json
   def index
     @diagnosticos = Diagnostico.all
+  if params[:search]
+    @diagnosticos = Diagnostico.search(params[:search]).order("created_at DESC")
+  else
+    @diagnosticos =Diagnostico.all.order('created_at DESC')
+  end
   end
 
   # GET /diagnosticos/1
