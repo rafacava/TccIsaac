@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  
+  root 'index#principal'
   resources :diagnosticos
   resources :terciaria_caracteristicas
   resources :secundaria_caracteristicas
