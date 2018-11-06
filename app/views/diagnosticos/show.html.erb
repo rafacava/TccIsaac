@@ -7,32 +7,32 @@
 
 <p>
   <strong>Principal fator:</strong>
-  <%= @diagnostico.principal_fator %>
+  <%= @diagnostico.principal_fator.nome %>
 </p>
 
 <p>
   <strong>Secundario fator:</strong>
-  <%= @diagnostico.secundario_fator %>
+  <%= @diagnostico.secundario_fator.nome %>
 </p>
 
 <p>
   <strong>Terciario fator:</strong>
-  <%= @diagnostico.terciario_fator %>
+  <%= @diagnostico.terciario_fator.nome %>
 </p>
 
 <p>
   <strong>Principal caracteristica:</strong>
-  <%= @diagnostico.principal_caracteristica %>
+  <%= @diagnostico.principal_caracteristica.nome %>
 </p>
 
 <p>
   <strong>Secundaria caracteristica:</strong>
-  <%= @diagnostico.secundaria_caracteristica %>
+  <%= @diagnostico.secundaria_caracteristica.nome %>
 </p>
 
 <p>
   <strong>Terciaria caracteristica:</strong>
-  <%= @diagnostico.terciaria_caracteristica %>
+  <%= @diagnostico.terciaria_caracteristica.nome %>
 </p>
 
 <%= link_to 'Edit', edit_diagnostico_path(@diagnostico) %> |

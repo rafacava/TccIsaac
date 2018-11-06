@@ -10,43 +10,53 @@
       </ul>
     </div>
   <% end %>
-
+<div class="input-field col s12">
   <div class="field">
     <%= form.label :nome %>
     <%= form.text_field :nome %>
   </div>
-
-  <div class="field">
+</div>
+<div class="input-field col s12">
+  <div class="field imput-field">  
     <%= form.label :principal_fator_id %>
-    <%= form.text_field :principal_fator_id %>
+    <%= collection_select(:diagnostico, :principal_fator_id, PrincipalFator.all, :id, :nome) %>
   </div>
-
+</div>
   <div class="field">
     <%= form.label :secundario_fator_id %>
-    <%= form.text_field :secundario_fator_id %>
+    <%= collection_select(:diagnostico, :secundario_fator_id, SecundarioFator.all, :id, :nome) %>
+    
   </div>
 
   <div class="field">
     <%= form.label :terciario_fator_id %>
-    <%= form.text_field :terciario_fator_id %>
-  </div>
+    <%= collection_select(:diagnostico, :terciario_fator_id, TerciarioFator.all, :id, :nome) %>
+    </div>
 
   <div class="field">
     <%= form.label :principal_caracteristica_id %>
-    <%= form.text_field :principal_caracteristica_id %>
-  </div>
+    <%= collection_select(:diagnostico, :principal_caracteristica_id, PrincipalCaracteristica.all, :id, :nome) %>
+    </div>
 
   <div class="field">
     <%= form.label :secundaria_caracteristica_id %>
-    <%= form.text_field :secundaria_caracteristica_id %>
+    <%= collection_select(:diagnostico, :secundaria_caracteristica_id, SecundariaCaracteristica.all, :id, :nome) %>
   </div>
 
   <div class="field">
     <%= form.label :terciaria_caracteristica_id %>
-    <%= form.text_field :terciaria_caracteristica_id %>
-  </div>
+    <%= collection_select(:diagnostico, :terciaria_caracteristica_id, TerciariaCaracteristica.all, :id, :nome) %>
+</div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
+  
+  <script>
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, options);
+  });      
+  </script>
 <% end %>

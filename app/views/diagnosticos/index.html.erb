@@ -20,12 +20,12 @@
     <% @diagnosticos.each do |diagnostico| %>
       <tr>
         <td><%= diagnostico.nome %></td>
-        <td><%= diagnostico.principal_fator %></td>
-        <td><%= diagnostico.secundario_fator %></td>
-        <td><%= diagnostico.terciario_fator %></td>
-        <td><%= diagnostico.principal_caracteristica %></td>
-        <td><%= diagnostico.secundaria_caracteristica %></td>
-        <td><%= diagnostico.terciaria_caracteristica %></td>
+        <td><%= diagnostico.principal_fator.nome %></td>
+        <td><%= diagnostico.secundario_fator.nome %></td>
+        <td><%= diagnostico.terciario_fator.nome %></td>
+        <td><%= diagnostico.principal_caracteristica.nome %></td>
+        <td><%= diagnostico.secundaria_caracteristica.nome %></td>
+        <td><%= diagnostico.terciaria_caracteristica.nome %></td>
         <td><%= link_to 'Show', diagnostico %></td>
         <td><%= link_to 'Edit', edit_diagnostico_path(diagnostico) %></td>
         <td><%= link_to 'Destroy', diagnostico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
